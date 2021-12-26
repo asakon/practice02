@@ -313,6 +313,29 @@ body {
     margin-right: auto;
 }
 
+@media (min-width: 768px) {
+    .container h2 {
+        font-size: 0.42rem;
+    }
+
+    .container.hours h2 {
+        font-size: 0.32rem;
+    }
+
+    .container.menu h2 + p,
+    .container.news h2 + p,
+    .container.hours h2 + p {
+        font-size: 0.2rem;
+    }
+
+    .container.menu h2::after,
+    .container.news h2::after {
+        width: 0.85rem;
+        margin-top: 0.23rem;
+        margin-bottom: 0.14rem;
+    }
+}
+
 /* Food & Drink */
 
 /* What's New */
