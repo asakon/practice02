@@ -170,52 +170,54 @@ body {
     box-shadow: 0 10px currentColor;
 }
 
-/* ナビゲーションボタン（閉じるボタン） */
-.open .nav-button {
-    z-index: 1000;
-}
+@media (max-width: 767px) {
+    /* ナビゲーションボタン（閉じるボタン） */
+    .open .nav-button {
+        z-index: 1000;
+    }
 
-.open .nav-button::before {
-    transform: rotate(-45deg);
-    box-shadow: none;
-}
+    .open .nav-button::before {
+        transform: rotate(-45deg);
+        box-shadow: none;
+    }
 
-.open .nav-button::after {
-    transform: rotate(45deg);
-}
+    .open .nav-button::after {
+        transform: rotate(45deg);
+    }
 
-/* ナビゲーションメニュー：（開いた状態） */
-html.open,
-.open body {
-    height: 100%;
-    overflow: hidden;
-}
+    /* ナビゲーションメニュー：（開いた状態） */
+    html.open,
+    .open body {
+        height: 100%;
+        overflow: hidden;
+    }
 
-.open .header {
-    position: relative;
-    margin-bottom: -100px;
-}
+    .open .header {
+        position: relative;
+        margin-bottom: -100px;
+    }
 
-.open .nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .open .nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        color: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.open .nav ul {
-    margin-bottom: 10vh;
-    list-style: none;
-}
+    .open .nav ul {
+        margin-bottom: 10vh;
+        list-style: none;
+    }
 
-.open .nav li:not(:last-child) {
-    margin-bottom: 20px;
+    .open .nav li:not(:last-child) {
+        margin-bottom: 20px;
+    }
 }
 
 /* ナビゲーションメニュー（閉じた状態） */
@@ -227,4 +229,27 @@ html.open,
     overflow: hidden;
     color: transparent;
     transition: 0.5s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .nav-button {
+        display: none;
+    }
+
+    .nav {
+        position: relative;
+        left: auto;
+        width: auto;
+        height: auto;
+    }
+
+    .nav ul {
+        display: flex;
+        list-style: none;
+        color: var(--white);
+    }
+
+    .nav ul li:not(:first-child) {
+        margin-left: 0.55rem;
+    }
 }
