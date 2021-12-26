@@ -253,3 +253,37 @@ body {
         margin-left: 0.55rem;
     }
 }
+
+/* --- コンテンツ --- */
+/* Food & Drink */
+
+/* What's New */
+.news {
+    background-image: url(/img/texture.jpg);
+    background-repeat: repeat;
+}
+
+/* HOURS */
+.hours {
+    background-image: url(/img/shop.jpg);
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
+    text-align: center;
+}
+
+/* カフェ情報 */
+.info {
+    background-color: var(--primary);
+    text-align: center;
+}
+
+/* フッター */
+.footer {
+    height: 89px;
+    background-color: var(--darkgray);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
