@@ -1,0 +1,44 @@
+@charset  "UTF-8";
+
+:root {
+    --primary: #ff953a;
+    --darkgray: #222;
+    --midgray: #414141;
+    --gray: #888;
+    --white: #fff;
+}
+
+/* 1rem = 100px とするために */
+:root {
+    font-size: 100px;
+}
+
+body {
+    color: var(--darkgray);
+    font-size: 0.16rem;
+    font-family: sans-serif;
+    line-height: 1.8;
+}
+
+/* base */
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    min-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+}
