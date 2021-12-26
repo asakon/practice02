@@ -255,6 +255,19 @@ body {
 }
 
 /* --- コンテンツ --- */
+/* コンテナ */
+.container {
+    padding: 0.68rem var(--side);
+}
+
+@media (min-width: 768px) {
+    .container.menu,
+    .container.news {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
 /* Food & Drink */
 
 /* What's New */
