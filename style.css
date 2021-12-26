@@ -42,3 +42,34 @@ a {
 a:hover {
     opacity: 0.8;
 }
+
+/* ヒーロー */
+.hero {
+    background-image: url(/img/cafe.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: var(--darkgray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html,
+body,
+.hero {
+    height: 100%;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        justify-content: flex-end;
+    }
+    .hero h1 {
+        width: 50%;
+        text-align: center;
+    }
+}
