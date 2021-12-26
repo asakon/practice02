@@ -171,32 +171,32 @@ body {
 }
 
 /* ナビゲーションボタン（閉じるボタン） */
-.nav-button {
+.open .nav-button {
     z-index: 1000;
 }
 
-.nav-button::before {
+.open .nav-button::before {
     transform: rotate(-45deg);
     box-shadow: none;
 }
 
-.nav-button::after {
+.open .nav-button::after {
     transform: rotate(45deg);
 }
 
 /* ナビゲーションメニュー：（開いた状態） */
-html,
-body {
+html.open,
+.open body {
     height: 100%;
     overflow: hidden;
 }
 
-.header {
+.open .header {
     position: relative;
     margin-bottom: -100px;
 }
 
-.nav {
+.open .nav {
     position: absolute;
     top: 0;
     left: 0;
@@ -209,11 +209,22 @@ body {
     align-items: center;
 }
 
-.nav ul {
+.open .nav ul {
     margin-bottom: 10vh;
     list-style: none;
 }
 
-.nav li:not(:last-child) {
+.open .nav li:not(:last-child) {
     margin-bottom: 20px;
+}
+
+/* ナビゲーションメニュー（閉じた状態） */
+.nav {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 100%;
+    overflow: hidden;
+    color: transparent;
+    transition: 0.5s ease-in-out;
 }
