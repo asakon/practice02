@@ -268,6 +268,51 @@ body {
     }
 }
 
+.container h2 {
+    font-family: 'Mentserrat', sans-serif;
+    font-size: 0.26rem;
+    letter-spacing: 0.179em;
+    line-height: 1;
+}
+
+.container.hours h2 {
+    letter-spacing: 0;
+}
+
+.container.info h2 img {
+    width: 2.44rem;
+}
+
+.container.menu h2 + p,
+.container.news h2 + p,
+.container.hours h2 + p {
+    font-size: 0.13rem;
+}
+
+.container.info h2 + p {
+    color: var(--midgray);
+    font-weight: bold;
+    letter-spacing: 0.516em;
+}
+
+.container.menu h2::after,
+.container.news h2::after,
+.container.hours h2::after {
+    content: '';
+    display: block;
+    width: 0.56rem;
+    height: 4px;
+    margin-top: 0.17rem;
+    margin-bottom: 0.1rem;
+    background-color: var(--primary);
+}
+
+.container.hours h2::after {
+    width: 0.28rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Food & Drink */
 
 /* What's New */
