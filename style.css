@@ -16,6 +16,12 @@
     font-size: 100px;
 }
 
+@media (min-width: 768px) {
+    :root {
+        font-size: 7.32vw; /* 画面幅が1366pxのときの100px */
+    }
+}
+
 body {
     color: var(--darkgray);
     font-size: 0.16rem;
@@ -337,6 +343,293 @@ body {
 }
 
 /* Food & Drink */
+.item {
+    margin-top: 0.64rem;
+}
+
+.item h3 {
+    margin-bottom: 0.19rem;
+    color: var(--midgray);
+    font-size: 0.16rem;
+    line-height: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.item h3::before {
+    content: url(/img/mark.svg);
+    display: block;
+    width: 0.4rem;
+    margin-right: 0.1rem;
+}
+
+.item p {
+    margin-bottom: 0.16rem;
+    font-size: 0.14rem;
+}
+
+.item .text {
+    width: 76vw;
+}
+
+.item.plate .text {
+    margin-left: auto;
+}
+
+.item.plate h3 {
+    flex-direction: row-reverse;
+}
+
+.item.plate h3::before {
+    margin-left: 0.1rem;
+    margin-right: 0;
+}
+
+/* Food & Drink: 画像の横幅と配置 */
+.item .photo {
+    margin: 0 calc( var(--side) * -1);
+    display: flex;
+    align-items: flex-end; /* 下ぞろえ */
+}
+
+.item.cafe .fig1 {
+    flex: 1 1 auto; /* 拡大縮小あり */
+    margin-right: -0.47rem;
+    margin-bottom: 0.38rem;
+}
+
+.item.cafe .fig2 {
+    flex: 0 0 43vw; /* 43%幅 */
+}
+
+.item.cafe .fig2 img {
+    height: 1.56rem;
+}
+
+.item.plate .fig1 {
+    flex: 0 0 85.6vw;
+}
+
+.item.sweet .fig1 {
+    flex: 1 1 auto;
+    margin-right: -0.26rem;
+    margin-bottom: 0.38rem;
+}
+.item.sweet .fig2 {
+    flex: 0 0 56.2vw;
+}
+
+.item.item.sweet img {
+    height: 2rem;
+}
+
+.item img {
+    width: 100%;
+    max-height: 2rem; /* 最大の高さは200px */
+    object-fit: cover; /* 切り出し表示 */
+}
+
+/* Food & Drink: PC版のレイアウト */
+@media (min-width: 768px) {
+    /* 基本 */
+    .item {
+        margin-top: 1rem;
+    }
+
+    .item h3 {
+        margin-bottom: 0.22rem;
+        font-size: 0.25rem;
+    }
+
+    .item h3::before {
+        width: 0.48rem;
+    }
+
+    .item p {
+        font-size: 0.16rem;
+    }
+
+    /* テキストと画像の配置 */
+    .item {
+        display: flex;
+    }
+
+    .item .text {
+        flex: 0 0 3.12rem;
+        margin-right: 0.49rem;
+    }
+
+    .item .photo {
+        flex: 1 1 auto;
+        margin: 0;
+    }
+
+    .item img {
+        max-height: none;
+    }
+
+    /* テキストと画像の配置： カフェ */
+    .item.cafe {
+        margin-left: calc( var(--side) * 2);
+        margin-right: calc( var(--side) * -1);
+    }
+
+    .item.cafe .fig1 {
+        margin-right: -0.88rem;
+        margin-bottom: 1.11rem;
+    }
+
+    .item.cafe .fig2 {
+        flex: 0 0 auto;
+        width: calc( var(--side) * 3 + 0.88rem);
+    }
+
+    .item.cafe .fig1 img{
+        height: 3.3rem;
+    }
+
+    .item.cafe .fig2 img{
+        height: 3rem;
+    }
+
+    .item.cafe .text {
+        align-self: flex-end;;
+    }
+    
+    .item.cafe h3 {
+        margin-left: -0.58rem;
+    }
+
+    /* テキストと画像の配置： カフェ */
+    .item.plate {
+        flex-direction: row-reverse;
+        margin-left: calc( var(--side) * -1);
+        margin-right: calc( var(--side) * 1);
+    }
+
+    .item.plate .text {
+        margin-right: 0;
+        margin-left: 0.49rem;
+    }
+
+    .item.plate .photo {
+        display: block;
+    }
+
+    .item.plate .fig1 img {
+        height: 3.95rem;
+    }
+
+    .item.plate h3 {
+        margin-right: -0.58rem;
+    }
+
+    /* テキストと画像の配置： スイーツ */
+    .item.sweet {
+        margin-left: calc( var(--side) * 2);
+        margin-right: calc( var(--side) * -1);
+    }
+
+    .item.sweet .fig1 {
+        margin: 0;
+    }
+
+    .item.sweet .fig2 {
+        flex: 0 0 4.69rem;
+    }
+
+    .item.sweet h3 {
+        margin-left: -0.58rem;
+    }
+
+}
+
+/* Food & Drink: イラスト */
+.item .text {
+    position: relative;
+    z-index: 2;
+}
+
+.item .photo {
+    position: relative;
+}
+
+.item.cafe .photo::after {
+    content: url(/img/cafe.svg);
+    display: block;
+    width: 28vw;
+    position: absolute;
+    top: -12vw;
+    right: 12vw;
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+    .item.cafe .photo::after {
+        width: 2rem;
+        top: auto;
+        right: auto;
+        bottom: 0.12rem;
+        left: -0.85rem;
+    }
+}
+
+.item.plate .photo::after {
+    content: url(/img/plate.svg);
+    display: block;
+    width: 30vw;
+    position: absolute;
+    top: -14vw;
+    left: 1.3vw;
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+    .item.plate .photo::after {
+        width: 2rem;
+        top: 1.21rem;
+        right: -1.48rem;
+        left: auto;
+    }
+}
+
+.item.sweet .photo::after {
+    content: url(/img/sweet.svg);
+    display: block;
+    width: 32vw;
+    position: absolute;
+    top: -12vw;
+    right: 9vw;
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+    .item.sweet .photo::after {
+        width: 2.27rem;
+        top: 1.11rem;
+        right: auto;
+        left: -1.68rem;
+    }
+}
+
+/* Food & Drink: タイトル */
+@media (min-width: 768px) {
+    .menu-inner {
+        position: relative;
+    }
+
+    .menu-title {
+        position: absolute;
+        top: 0.13rem;
+        left: 0;
+    }
+
+    .menu-inner .item.cafe {
+        margin-top: 0;
+    }
+}
+
 
 /* What's New */
 .news {
