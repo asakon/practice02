@@ -363,6 +363,22 @@ body {
     font-size: 0.14rem;
 }
 
+.item .text {
+    width: 76vw;
+}
+
+.item.plate .text {
+    margin-left: auto;
+}
+
+.item.plate h3 {
+    flex-direction: row-reverse;
+}
+
+.item.plate h3::before {
+    margin-left: 0.1rem;
+    margin-right: 0;
+}
 
 /* What's New */
 .news {
