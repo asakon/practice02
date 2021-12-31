@@ -613,6 +613,24 @@ body {
     }
 }
 
+/* Food & Drink: タイトル */
+@media (min-width: 768px) {
+    .menu-inner {
+        position: relative;
+    }
+
+    .menu-title {
+        position: absolute;
+        top: 0.13rem;
+        left: 0;
+    }
+
+    .menu-inner .item.cafe {
+        margin-top: 0;
+    }
+}
+
+
 /* What's New */
 .news {
     background-image: url(/img/texture.jpg);
