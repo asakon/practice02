@@ -501,7 +501,29 @@ body {
         margin-left: -0.58rem;
     }
 
+    /* テキストと画像の配置： カフェ */
+    .item.plate {
+        flex-direction: row-reverse;
+        margin-left: calc( var(--side) * -1);
+        margin-right: calc( var(--side) * 1);
+    }
 
+    .item.plate .text {
+        margin-right: 0;
+        margin-left: 0.49rem;
+    }
+
+    .item.plate .photo {
+        display: block;
+    }
+
+    .item.plate .fig1 img {
+        height: 3.95rem;
+    }
+
+    .item.plate h3 {
+        margin-right: -0.58rem;
+    }
 
 }
 
