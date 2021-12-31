@@ -472,7 +472,7 @@ body {
     /* テキストと画像の配置： カフェ */
     .item.cafe {
         margin-left: calc( var(--side) * 2);
-        margin-right: calc( var(--side) * 1);
+        margin-right: calc( var(--side) * -1);
     }
 
     .item.cafe .fig1 {
