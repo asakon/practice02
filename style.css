@@ -16,6 +16,12 @@
     font-size: 100px;
 }
 
+@media (min-width: 768px) {
+    :root {
+        font-size: 7.32vw; /* 画面幅が1366pxのときの100px */
+    }
+}
+
 body {
     color: var(--darkgray);
     font-size: 0.16rem;
@@ -443,6 +449,60 @@ body {
     .item p {
         font-size: 0.16rem;
     }
+
+    /* テキストと画像の配置 */
+    .item {
+        display: flex;
+    }
+
+    .item .text {
+        flex: 0 0 3.12rem;
+        margin-right: 0.49rem;
+    }
+
+    .item .photo {
+        flex: 1 1 auto;
+        margin: 0;
+    }
+
+    .item img {
+        max-height: none;
+    }
+
+    /* テキストと画像の配置： カフェ */
+    .item.cafe {
+        margin-left: calc( var(--side) * 2);
+        margin-right: calc( var(--side) * 1);
+    }
+
+    .item.cafe .fig1 {
+        margin-right: -0.88rem;
+        margin-bottom: 1.11rem;
+    }
+
+    .item.cafe .fig2 {
+        flex: 0 0 auto;
+        width: calc( var(--side) * 3 + 0.88rem);
+    }
+
+    .item.cafe .fig1 img{
+        height: 3.3rem;
+    }
+
+    .item.cafe .fig2 img{
+        height: 3rem;
+    }
+
+    .item.cafe .text {
+        align-self: flex-end;;
+    }
+    
+    .item.cafe h3 {
+        margin-left: -0.58rem;
+    }
+
+
+
 }
 
 /* What's New */
