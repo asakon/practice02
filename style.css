@@ -545,6 +545,74 @@ body {
 
 }
 
+/* Food & Drink: イラスト */
+.item .text {
+    position: relative;
+    z-index: 2;
+}
+
+.item .photo {
+    position: relative;
+}
+
+.item.cafe .photo::after {
+    content: url(/img/cafe.svg);
+    display: block;
+    width: 28vw;
+    position: absolute;
+    top: -12vw;
+    right: 12vw;
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+    .item.cafe .photo::after {
+        width: 2rem;
+        top: auto;
+        right: auto;
+        bottom: 0.12rem;
+        left: -0.85rem;
+    }
+}
+
+.item.plate .photo::after {
+    content: url(/img/plate.svg);
+    display: block;
+    width: 30vw;
+    position: absolute;
+    top: -14vw;
+    left: 1.3vw;
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+    .item.plate .photo::after {
+        width: 2rem;
+        top: 1.21rem;
+        right: -1.48rem;
+        left: auto;
+    }
+}
+
+.item.sweet .photo::after {
+    content: url(/img/sweet.svg);
+    display: block;
+    width: 32vw;
+    position: absolute;
+    top: -12vw;
+    right: 9vw;
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+    .item.sweet .photo::after {
+        width: 2.27rem;
+        top: 1.11rem;
+        right: auto;
+        left: -1.68rem;
+    }
+}
+
 /* What's New */
 .news {
     background-image: url(/img/texture.jpg);
