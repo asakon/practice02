@@ -637,6 +637,32 @@ body {
     background-repeat: repeat;
 }
 
+.news dl {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+    font-size: 0.14rem;
+}
+
+.news dt {
+    margin-bottom: 0.03rem;
+    font-weight: bold;
+    color: var(--gray);
+}
+
+.news dd {
+    margin-left: 0;
+}
+
+.news dd:not(:last-child) {
+    margin-bottom: 0.35rem;
+}
+
+
+.news .more {
+    font-weight: bold;
+    color: var(--primary);
+}
+
 /* HOURS */
 .hours {
     background-image: url(/img/shop.jpg);
