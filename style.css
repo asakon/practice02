@@ -633,8 +633,8 @@ body {
 
 /* What's New */
 .news {
-    background-image: url(/img/texture.jpg);
-    background-repeat: repeat;
+    background-image: url(/img/edge.png), url(/img/texture.jpg);
+    background-repeat: repeat-x, repeat;
 }
 
 .news dl {
