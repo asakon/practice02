@@ -676,6 +676,14 @@ body {
     transform: rotate(-90deg);
 }
 
+@media (min-width: 768px) {
+    .news dl,
+    .news .more {
+        margin-left: calc(var(--side) * 2);
+        margin-right: calc(var(--side) * 2);
+    }
+}
+
 /* HOURS */
 .hours {
     background-image: url(/img/shop.jpg);
