@@ -682,6 +682,25 @@ body {
         margin-left: calc(var(--side) * 2);
         margin-right: calc(var(--side) * 2);
     }
+
+    .news dl {
+        font-size: 0.16rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .news dt {
+        flex: 0 0 1.57rem;
+    }
+
+    .news dd {
+        flex: 0 0 auto;
+        width: calc(100% - 1.57rem);
+    }
+
+    .news dd:not(:last-child) {
+        margin-bottom: 0.08rem;
+    }
 }
 
 /* HOURS */
