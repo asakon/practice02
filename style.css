@@ -733,6 +733,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     text-align: left;
+    width: 2.16rem;
+    margin: 0.23rem auto 0;
 }
 
 .hours dt {
