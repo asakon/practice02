@@ -633,8 +633,74 @@ body {
 
 /* What's New */
 .news {
-    background-image: url(/img/texture.jpg);
-    background-repeat: repeat;
+    background-image: url(/img/edge.png), url(/img/texture.jpg);
+    background-repeat: repeat-x, repeat;
+}
+
+.news dl {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+    font-size: 0.14rem;
+}
+
+.news dt {
+    margin-bottom: 0.03rem;
+    font-weight: bold;
+    color: var(--gray);
+}
+
+.news dd {
+    margin-left: 0;
+}
+
+.news dd:not(:last-child) {
+    margin-bottom: 0.35rem;
+}
+
+.news .more {
+    font-weight: bold;
+    color: var(--primary);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0.16rem;
+    border-top: solid 0.12rem currentColor;
+    text-align: right;
+}
+
+.news .more::after {
+    content: url(/img/arrow.svg);
+    display: block;
+    margin-left: 0.11rem;
+    width: 0.18rem;
+    transform: rotate(-90deg);
+}
+
+@media (min-width: 768px) {
+    .news dl,
+    .news .more {
+        margin-left: calc(var(--side) * 2);
+        margin-right: calc(var(--side) * 2);
+    }
+
+    .news dl {
+        font-size: 0.16rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .news dt {
+        flex: 0 0 1.57rem;
+    }
+
+    .news dd {
+        flex: 0 0 auto;
+        width: calc(100% - 1.57rem);
+    }
+
+    .news dd:not(:last-child) {
+        margin-bottom: 0.08rem;
+    }
 }
 
 /* HOURS */
