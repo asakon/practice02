@@ -657,10 +657,23 @@ body {
     margin-bottom: 0.35rem;
 }
 
-
 .news .more {
     font-weight: bold;
     color: var(--primary);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0.16rem;
+    border-top: solid 0.12rem currentColor;
+    text-align: right;
+}
+
+.news .more::after {
+    content: url(/img/arrow.svg);
+    display: block;
+    margin-left: 0.11rem;
+    width: 0.18rem;
+    transform: rotate(-90deg);
 }
 
 /* HOURS */
