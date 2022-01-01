@@ -729,6 +729,22 @@ body {
     z-index: 2;
 }
 
+.hours dl {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.hours dt {
+    flex: 0 0 4em;
+}
+
+.hours dd {
+    flex: 0 0 auto;
+    width: calc(100% - 4em);
+    margin-left: 0;
+}
+
 /* カフェ情報 */
 .info {
     background-color: var(--primary);
