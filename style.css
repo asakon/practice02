@@ -157,6 +157,7 @@ body {
     background: none;
     width: 29px;
     height: 20px;
+    overflow: visible; /* IE対応 */
     cursor: pointer;
     color: var(--white);
 }
